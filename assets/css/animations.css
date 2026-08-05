@@ -1,0 +1,19 @@
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes zoomHero{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes pulseGold{0%,100%{box-shadow:0 0 0 rgba(176,141,87,0)}50%{box-shadow:0 0 25px rgba(176,141,87,.45)}}
+@keyframes floatParticle{
+  0%{transform:translateY(0) translateX(0);opacity:0}
+  10%{opacity:.8}
+  90%{opacity:.6}
+  100%{transform:translateY(-120vh) translateX(20px);opacity:0}
+}
+
+.hero-content{animation:fadeUp 1s ease both}
+.evento,.gallery img,.local-card,.countdown .box{animation:fadeUp .9s ease both}
+button:hover,.btn-map:hover{animation:pulseGold 1.6s infinite}
+
+/* respeita utilizadores que preferem menos movimento */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .hero-bg{animation:none}
+}
