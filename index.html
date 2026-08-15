@@ -1,201 +1,786 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>António & Saria | Convite de Casamento</title>
-<meta name="description" content="Convite de casamento de António & Saria — 14 de Setembro de 2026, Maputo.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/animations.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>António & Saria | Convite de Casamento</title>
+
+    <meta
+        name="description"
+        content="Convite digital de casamento de António & Saria."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Música de fundo -->
-<audio id="bg-music" loop preload="none">
-  <source src="assets/music/cancao-casamento.mp3" type="audio/mpeg">
-</audio>
-<button id="music-toggle" class="music-toggle" aria-label="Ligar/desligar música">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-</button>
+<!-- =====================================================
+     ABERTURA
+===================================================== -->
 
-<!-- HERO / CAPA -->
-<header class="hero" id="cover">
-  <div class="hero-bg"></div>
-  <div id="particles"></div>
-  <div class="hero-top">
-    <div class="hero-monogram"><span>A · S</span></div>
-    <span class="hero-eyebrow">Convite de Casamento</span>
-  </div>
-  <div class="hero-content">
-    <h1>António &amp; Saria</h1>
-    <div class="hero-date">14 · Setembro · 2026</div>
-    <p class="hero-verse">
-      Goza a vida com a mulher que amas, todos os dias da tua vida vã, os quais Deus te deu debaixo do sol — porque esta é a tua porção nesta vida.
-      <cite>Eclesiastes 9:9</cite>
-    </p>
-  </div>
-  <span class="scroll-hint">↓</span>
-</header>
+<div id="opening-screen" class="opening-screen">
 
-<!-- FAMÍLIA / BÊNÇÃO / NOME DO CONVIDADO -->
-<section id="familia">
-  <div class="container reveal">
-    <p class="blessing">Com a bênção de Deus e de seus pais</p>
-    <div class="parents">
-      <div class="side">
-        <p>Zefanias Aurélio Massinha</p>
-        <p>Rosa António Timane</p>
-        <p class="memoria">em memória</p>
-      </div>
-      <div class="divider-vert"></div>
-      <div class="side">
-        <p>Salomão Bila</p>
-        <p>Isabel Tamele</p>
-        <p class="memoria">em memória</p>
-      </div>
+    <div class="opening-content">
+
+        <p class="opening-small">
+            UM CONVITE ESPECIAL
+        </p>
+
+        <h1>
+            António
+            <span>&</span>
+            Saria
+        </h1>
+
+        <p class="opening-date">
+            14 • 09 • 2026
+        </p>
+
+        <button
+            id="open-invitation"
+            class="open-button"
+        >
+            Abrir convite
+        </button>
+
     </div>
-    <h2 style="font-family:'Great Vibes',cursive;font-weight:400;font-size:2.8rem;margin-top:30px">António &amp; Saria</h2>
-    <hr style="border:none;border-top:1px solid var(--gold-light);width:60px;margin:20px auto">
-    <p class="invite-line">Têm a honra e o prazer de convidar o Senhor(a)</p>
-    <div class="guest-name" id="guestName" contenteditable="true" data-placeholder="Toca aqui e escreve o teu nome"></div>
-    <span class="guest-hint" id="guestHint">Toca no espaço acima para escreveres o teu nome</span>
-  </div>
-</section>
 
-<!-- OS NOIVOS -->
-<section id="noivos" style="background:#fff">
-  <div class="container reveal">
-    <h2>Os Noivos</h2>
-    <div class="noivos-photo">
-      <img src="assets/images/noivos.jpg" alt="António e Saria abraçados">
-    </div>
-    <p class="noivos-caption">António &amp; Saria</p>
-  </div>
-</section>
-
-<!-- CONTAGEM REGRESSIVA -->
-<section id="contagem">
-  <div class="container reveal">
-    <h2>Faltam</h2>
-    <p class="section-sub" id="cd-label">para o grande dia</p>
-    <div class="countdown">
-      <div class="box"><span class="num" id="cd-days">00</span><span class="label">dias</span></div>
-      <div class="box"><span class="num" id="cd-hours">00</span><span class="label">horas</span></div>
-      <div class="box"><span class="num" id="cd-minutes">00</span><span class="label">min</span></div>
-      <div class="box"><span class="num" id="cd-seconds">00</span><span class="label">seg</span></div>
-    </div>
-    <p style="margin-top:26px;font-size:1rem;color:#4a4237">O tempo está a passar — mal podemos esperar para celebrar convosco este dia tão especial.</p>
-  </div>
-</section>
-
-<!-- PROGRAMA DO DIA — SÁBADO -->
-<section id="programa-sabado" style="background:#fff">
-  <div class="container reveal">
-    <h2>Programa do Dia</h2>
-    <p class="section-sub">Sábado, 14 de Setembro</p>
-    <div class="cards">
-      <div class="card-evento">
-        <div class="tag">Cerimónia Civil</div>
-        <h3>Sábado, 09h00</h3>
-        <div class="row"><span class="icon">📅</span><span>14 de Setembro de 2026</span></div>
-        <div class="row"><span class="icon">📍</span><span>Palácio da Família (Museu)</span></div>
-        <a class="map-link" href="https://maps.google.com/?q=Pal%C3%A1cio+da+Fam%C3%ADlia+Maputo" target="_blank" rel="noopener">Ver localização no mapa →</a>
-      </div>
-      <div class="card-evento">
-        <div class="tag">Copo de Água</div>
-        <h3>Sábado, 13h00</h3>
-        <div class="row"><span class="icon">📅</span><span>14 de Setembro de 2026</span></div>
-        <div class="row"><span class="icon">📍</span><span>Salão do Instituto Industrial de Maputo</span></div>
-        <a class="map-link" href="https://maps.google.com/?q=Instituto+Industrial+de+Maputo" target="_blank" rel="noopener">Ver localização no mapa →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMA DO DIA — DOMINGO -->
-<section id="programa-domingo">
-  <div class="container reveal">
-    <p class="section-sub">Domingo, 13 de Setembro</p>
-    <div class="cards">
-      <div class="card-evento">
-        <div class="tag">Cerimónia Religiosa</div>
-        <h3>Domingo, 07h00</h3>
-        <div class="row"><span class="icon">📅</span><span>13 de Setembro de 2026</span></div>
-        <div class="row"><span class="icon">📍</span><span>Comunidade Divino Espírito Santo, Bobole</span></div>
-        <a class="map-link" href="https://maps.google.com/?q=Comunidade+Divino+Esp%C3%ADrito+Santo+Bobole" target="_blank" rel="noopener">Ver localização no mapa →</a>
-      </div>
-      <div class="card-evento">
-        <div class="tag">Copo de Água</div>
-        <h3>Domingo, 13h00</h3>
-        <div class="row"><span class="icon">📅</span><span>13 de Setembro de 2026</span></div>
-        <div class="row"><span class="icon">📍</span><span>Residência dos noivos — Bairro Xipunganga, Quarteirão 02, Casa N.º 36, Bobole</span></div>
-        <a class="map-link" href="https://maps.google.com/?q=Bairro+Xipunganga+Bobole" target="_blank" rel="noopener">Ver localização no mapa →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INFORMAÇÕES / NOTAS -->
-<section id="informacoes" style="background:#fff">
-  <div class="container reveal">
-    <h2>Informações</h2>
-    <div class="notes-box">
-      <p>A vossa presença será digna do nosso maior apreço.</p>
-      <p>Mesa: <span id="mesaVal" class="editable-field" contenteditable="true" data-placeholder="—">______</span>
-         &nbsp;Convite válido para <span id="pessoasVal" class="editable-field" contenteditable="true" data-placeholder="—">______</span> pessoa(s)</p>
-      <div class="no-children">Não extensivo a crianças</div>
-      <p class="contacts">Dúvidas e mais informações:<br>+258 84 924 8857 · +258 87 398 5951 · +258 87 845 6057</p>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<section id="galeria">
-  <div class="container reveal">
-    <h2>Galeria</h2>
-    <p class="section-sub">Toque numa foto para ver em ecrã inteiro</p>
-    <div class="gallery">
-      <img src="assets/images/galeria-1.jpg" alt="António e Saria" loading="lazy">
-      <img src="assets/images/galeria-2.jpg" alt="António e Saria" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- RSVP -->
-<section id="rsvp" style="background:#fff">
-  <div class="container reveal">
-    <h2>Confirma a Presença</h2>
-    <p class="section-sub">Faz-nos saber se vais estar connosco neste dia. Ao confirmares, vais ser levado(a) ao WhatsApp para enviares a tua resposta.</p>
-    <div class="rsvp-actions" style="max-width:400px;margin:20px auto 0">
-      <button type="button" class="btn-whats" id="btnYes">✓ Confirmar presença</button>
-      <button type="button" style="background:transparent;color:#6b6154;text-decoration:underline" id="btnNo">Não poderei ir</button>
-    </div>
-    <p id="rsvp-msg" role="status" aria-live="polite"></p>
-  </div>
-</section>
-
-<footer>
-  <p class="assinatura">António &amp; Saria</p>
-  <p>14 de Setembro de 2026</p>
-</footer>
-
-<!-- Lightbox da galeria -->
-<div class="lightbox" id="lightbox">
-  <button class="close" id="lightbox-close" aria-label="Fechar">✕</button>
-  <button class="prev" id="lightbox-prev" aria-label="Anterior">‹</button>
-  <img id="lightbox-img" src="" alt="">
-  <button class="next" id="lightbox-next" aria-label="Seguinte">›</button>
 </div>
 
-<script src="assets/js/app.js"></script>
-<script src="assets/js/countdown.js"></script>
-<script src="assets/js/gallery.js"></script>
-<script src="assets/js/music.js"></script>
-<script src="assets/js/personalizacao.js"></script>
-<script src="assets/js/rsvp.js"></script>
-<script src="assets/js/effects.js"></script>
+
+<!-- =====================================================
+     NAVEGAÇÃO
+===================================================== -->
+
+<nav class="premium-nav">
+
+    <a href="#hero" class="nav-logo">
+        A <span>&</span> S
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#story">História</a>
+        <a href="#couple">Noivos</a>
+        <a href="#schedule">Dia</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#location">Local</a>
+        <a href="#rsvp">RSVP</a>
+
+    </div>
+
+    <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-label="Abrir menu"
+    >
+        ☰
+    </button>
+
+</nav>
+
+
+<!-- =====================================================
+     MENU MOBILE
+===================================================== -->
+
+<div id="mobile-menu" class="mobile-menu">
+
+    <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+    >
+        ×
+    </button>
+
+    <a href="#story">Nossa História</a>
+    <a href="#couple">Os Noivos</a>
+    <a href="#countdown-section">Contagem</a>
+    <a href="#schedule">Programação</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#location">Localização</a>
+    <a href="#gifts">Presentes</a>
+    <a href="#rsvp">Confirmar Presença</a>
+
+</div>
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main id="main-content">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="hero" class="hero section">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            O NOSSO GRANDE DIA
+        </p>
+
+        <h1>
+            António
+            <span>&</span>
+            Saria
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-date">
+            14 DE SETEMBRO DE 2026
+        </p>
+
+        <p class="hero-text">
+            Dois corações, uma história
+            e um novo capítulo para começar.
+        </p>
+
+        <div class="hero-scroll">
+
+            <span>
+                DESLIZE PARA DESCOBRIR
+            </span>
+
+            <i></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FRASE
+===================================================== -->
+
+<section id="quote" class="quote section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            UM MOMENTO ESPECIAL
+        </span>
+
+        <blockquote>
+            “O amor é paciente,
+            o amor é bondoso.”
+        </blockquote>
+
+        <p>
+            1 Coríntios 13:4
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HISTÓRIA
+===================================================== -->
+
+<section id="story" class="story section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            A NOSSA HISTÓRIA
+        </span>
+
+        <h2>
+            Uma história<br>
+            escrita a dois.
+        </h2>
+
+        <div class="story-timeline">
+
+            <article class="story-item">
+
+                <span class="story-number">
+                    01
+                </span>
+
+                <div>
+                    <h3>
+                        O primeiro encontro
+                    </h3>
+
+                    <p>
+                        Um encontro que parecia simples,
+                        mas que marcou o início de uma
+                        história especial.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="story-item">
+
+                <span class="story-number">
+                    02
+                </span>
+
+                <div>
+                    <h3>
+                        O amor
+                    </h3>
+
+                    <p>
+                        Com o passar do tempo, a amizade
+                        transformou-se em companheirismo,
+                        carinho e amor.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="story-item">
+
+                <span class="story-number">
+                    03
+                </span>
+
+                <div>
+                    <h3>
+                        O pedido
+                    </h3>
+
+                    <p>
+                        Um momento inesquecível que
+                        mudou para sempre o rumo
+                        desta história.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="story-item">
+
+                <span class="story-number">
+                    04
+                </span>
+
+                <div>
+                    <h3>
+                        O grande dia
+                    </h3>
+
+                    <p>
+                        Chegou o momento de celebrar
+                        este amor ao lado das pessoas
+                        que fazem parte da nossa história.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NOIVOS
+===================================================== -->
+
+<section id="couple" class="couple section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            OS NOIVOS
+        </span>
+
+        <h2>
+            Duas vidas,<br>
+            uma história.
+        </h2>
+
+        <div class="couple-editorial">
+
+            <div class="couple-photo couple-photo-groom">
+                <span>ANTÓNIO</span>
+            </div>
+
+            <div class="couple-center">
+                <span>&</span>
+            </div>
+
+            <div class="couple-photo couple-photo-bride">
+                <span>SARIA</span>
+            </div>
+
+        </div>
+
+        <p class="couple-description">
+            O amor não é apenas encontrar alguém.
+            É encontrar alguém com quem queremos
+            viver todos os próximos capítulos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section
+    id="countdown-section"
+    class="countdown section"
+>
+
+    <div class="section-container">
+
+        <span class="section-label">
+            CONTAGEM REGRESSIVA
+        </span>
+
+        <h2>
+            O grande dia<br>
+            está chegando.
+        </h2>
+
+        <div id="countdown" class="countdown-grid">
+
+            <div>
+                <strong id="days">00</strong>
+                <span>Dias</span>
+            </div>
+
+            <div>
+                <strong id="hours">00</strong>
+                <span>Horas</span>
+            </div>
+
+            <div>
+                <strong id="minutes">00</strong>
+                <span>Minutos</span>
+            </div>
+
+            <div>
+                <strong id="seconds">00</strong>
+                <span>Segundos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROGRAMAÇÃO
+===================================================== -->
+
+<section id="schedule" class="schedule section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            PROGRAMAÇÃO
+        </span>
+
+        <h2>
+            O grande dia.
+        </h2>
+
+        <div class="schedule-list">
+
+            <article class="schedule-item">
+
+                <span>10:00</span>
+
+                <div>
+                    <h3>Cerimónia</h3>
+
+                    <p>
+                        Celebração do casamento.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="schedule-item">
+
+                <span>12:00</span>
+
+                <div>
+                    <h3>Recepção</h3>
+
+                    <p>
+                        Recepção dos convidados.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="schedule-item">
+
+                <span>14:00</span>
+
+                <div>
+                    <h3>Celebração</h3>
+
+                    <p>
+                        Almoço e celebração.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALERIA
+===================================================== -->
+
+<section id="gallery" class="gallery section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            OS NOSSOS MOMENTOS
+        </span>
+
+        <h2>
+            Memórias que<br>
+            ficam para sempre.
+        </h2>
+
+        <div class="premium-gallery">
+
+            <div class="gallery-photo photo-1">
+                <span>01</span>
+            </div>
+
+            <div class="gallery-photo photo-2">
+                <span>02</span>
+            </div>
+
+            <div class="gallery-photo photo-3">
+                <span>03</span>
+            </div>
+
+            <div class="gallery-photo photo-4">
+                <span>04</span>
+            </div>
+
+            <div class="gallery-photo photo-5">
+                <span>05</span>
+            </div>
+
+            <div class="gallery-photo photo-6">
+                <span>06</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOCALIZAÇÃO
+===================================================== -->
+
+<section id="location" class="location section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            LOCALIZAÇÃO
+        </span>
+
+        <h2>
+            Onde será o nosso<br>
+            grande dia?
+        </h2>
+
+        <div class="map-card">
+
+            <div class="map-icon">
+                ◉
+            </div>
+
+            <h3>
+                Local da celebração
+            </h3>
+
+            <p>
+                A localização exata será apresentada
+                aqui.
+            </p>
+
+            <button
+                id="map-button"
+                class="map-button"
+            >
+                Abrir no Google Maps
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DRESS CODE
+===================================================== -->
+
+<section id="dress-code" class="dress-code section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            DRESS CODE
+        </span>
+
+        <h2>
+            Vista-se para celebrar.
+        </h2>
+
+        <p>
+            Elegância e sofisticação para
+            celebrar este dia inesquecível.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRESENTES
+===================================================== -->
+
+<section id="gifts" class="gifts section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            LISTA DE PRESENTES
+        </span>
+
+        <h2>
+            Um gesto de carinho.
+        </h2>
+
+        <p>
+            Escolha um presente da nossa lista.
+            Cada opção possui disponibilidade limitada.
+        </p>
+
+        <div
+            id="gift-list"
+            class="gift-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RSVP
+===================================================== -->
+
+<section id="rsvp" class="rsvp section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            RSVP
+        </span>
+
+        <h2>
+            Confirme a sua presença.
+        </h2>
+
+        <form id="rsvp-form">
+
+            <input
+                type="text"
+                id="guest-name"
+                placeholder="Nome do convidado"
+                required
+            >
+
+            <select
+                id="attendance"
+                required
+            >
+
+                <option value="">
+                    Você estará presente?
+                </option>
+
+                <option value="yes">
+                    Sim, estarei presente
+                </option>
+
+                <option value="no">
+                    Infelizmente não poderei ir
+                </option>
+
+            </select>
+
+            <input
+                type="number"
+                id="guests"
+                min="1"
+                max="10"
+                placeholder="Número de pessoas"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Deixe uma mensagem aos noivos"
+            ></textarea>
+
+            <button type="submit">
+                Confirmar presença
+            </button>
+
+        </form>
+
+        <div id="rsvp-message"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final-message section">
+
+    <div class="section-container">
+
+        <span class="section-label">
+            COM AMOR
+        </span>
+
+        <h2>
+            António & Saria
+        </h2>
+
+        <p>
+            Esperamos celebrar este momento
+            inesquecível com você.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ASSINATURA FLUXO DIGITAL
+===================================================== -->
+
+<footer class="company-footer">
+
+    <p>
+        CONVITE DIGITAL DESENVOLVIDO POR
+    </p>
+
+    <strong>
+        Fluxo Digital MZ
+    </strong>
+
+    <p class="company-contact">
+
+        Contacto:
+        +258 875 696 973
+
+        <br>
+
+        Email:
+        Fluxo Digital 258
+
+    </p>
+
+</footer>
+
+</main>
+
+
+<!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+<button
+    id="music-button"
+    class="music-button"
+    aria-label="Controlar música"
+>
+    ♫
+</button>
+
+<audio
+    id="wedding-music"
+    loop
+>
+    <source
+        src="assets/music.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="countdown.js"></script>
+
+<script src="app.js"></script>
+
 </body>
 </html>
